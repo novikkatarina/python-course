@@ -3,7 +3,12 @@
 
 # при $d = 0.001, π = 3.141
 import math
-d = int(input('insert accuracy '))
+from decimal import Decimal
+d = input('insert accuracy ')
 
 p = math.pi
-print(f'{p:.{d}f}'.format(round(p, ))) 
+# p.toFixed(d)
+# p = p.quantize(Decimal(int('d')))
+# print(f'{p:.{d}f}'.format(round(p, )))
+precision = len(d.split('.')[1])
+print(f'{p:.{precision}f}')
