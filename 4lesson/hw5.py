@@ -49,7 +49,7 @@ for i in range(10):
             res.append(f'{r}*x')
         else:
             res.append(f'{r}*x^{i}')
-res = res[::-1]
+res = res[::-1] #в обратном порядке
 # print(res)
 res_s = (' + ').join(res)
 res_s += ' = 0'
